@@ -1,0 +1,145 @@
+@use "./utils/variable" as variable;
+@use "./utils/mixin.scss" as mixin;
+
+
+body {
+    background-color: variable.$blackColor;
+}
+
+#stats {
+    #root {
+        .btn {
+            cursor: pointer;
+            padding: 5px 15px;
+            background-color: variable.$yellowColor;
+            transition: 0.5s;
+
+            &:hover {
+                background-color: variable.$whiteColor;
+            }
+        }
+
+        .container {
+            display: flex;
+
+
+            .sidebar {
+                background-color: variable.$boxesColor;
+                width: 15%;
+                height: 125vh;
+                padding-bottom: 50px;
+                left: 0px;
+                transition: all 0.7s;
+                position: absolute;
+
+                .icons {
+                    text-align: center;
+
+                    i {
+                        padding: 25px 0;
+                        color: variable.$sidebarIconColor;
+                        width: 100%;
+                        transition: 0.5s;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: variable.$whiteColor;
+                            color: variable.$blackColor;
+                        }
+                    }
+                }
+            }
+
+
+            .main {
+                position: absolute;
+                left: 0px;
+                transition: all 0.7s;
+
+                h1 {
+                    @include mixin.header;
+                }
+
+                .stats-box {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-left: 15%;
+
+                    .stats {
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                        background-color: variable.$boxesColor;
+                        padding: 0 120px;
+                        margin-left: 10%;
+                        width: 35%;
+                        height: 200px;
+                        text-align: center;
+                        border-radius: 30px;
+
+                        p {
+                            font-size: 20px;
+                            color: variable.$greyColor;
+                        }
+
+                        h1 {
+                            padding: 10px;
+                            font-size: 35px;
+                            color: variable.$whiteColor;
+                        }
+
+                        .green {
+                            color: variable.$greenColor;
+                        }
+
+                        .red {
+                            color: variable.$redColor;
+                        }
+                    }
+                }
+
+                .products {
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    margin-left: 3%;
+
+                    .item {
+                        @include mixin.wallpaper-ios;
+                        margin-bottom: 2%;
+                        width: 121%;
+
+                        h1 {
+                            @include mixin.header;
+                        }
+
+                        img {
+                            @include mixin.image;
+                        }
+
+                        .wallpaper-list {
+                            @include mixin.list;
+
+                            ul {
+                                display: flex;
+
+                                li {
+                                    @include mixin.ulLi;
+
+                                    b {
+                                        color: variable.$whiteColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dis-none {
+    left: -400px !important;
+}
+
+.left {
+    left: 200px !important;
+}

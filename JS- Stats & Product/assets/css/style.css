@@ -1,0 +1,126 @@
+body {
+  background-color: black;
+}
+
+#stats #root .btn {
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: yellow;
+  transition: 0.5s;
+}
+#stats #root .btn:hover {
+  background-color: white;
+}
+#stats #root .container {
+  display: flex;
+}
+#stats #root .container .sidebar {
+  background-color: rgb(28, 25, 25);
+  width: 15%;
+  height: 125vh;
+  padding-bottom: 50px;
+  left: 0px;
+  transition: all 0.7s;
+  position: absolute;
+}
+#stats #root .container .sidebar .icons {
+  text-align: center;
+}
+#stats #root .container .sidebar .icons i {
+  padding: 25px 0;
+  color: rgb(163, 139, 139);
+  width: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#stats #root .container .sidebar .icons i:hover {
+  background-color: white;
+  color: black;
+}
+#stats #root .container .main {
+  position: absolute;
+  left: 0px;
+  transition: all 0.7s;
+}
+#stats #root .container .main h1 {
+  margin-left: 3%;
+  color: white;
+  font-size: 25px;
+}
+#stats #root .container .main .stats-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 15%;
+}
+#stats #root .container .main .stats-box .stats {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgb(28, 25, 25);
+  padding: 0 120px;
+  margin-left: 10%;
+  width: 35%;
+  height: 200px;
+  text-align: center;
+  border-radius: 30px;
+}
+#stats #root .container .main .stats-box .stats p {
+  font-size: 20px;
+  color: rgb(199, 192, 192);
+}
+#stats #root .container .main .stats-box .stats h1 {
+  padding: 10px;
+  font-size: 35px;
+  color: white;
+}
+#stats #root .container .main .stats-box .stats .green {
+  color: green;
+}
+#stats #root .container .main .stats-box .stats .red {
+  color: red;
+}
+#stats #root .container .main .products {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 3%;
+}
+#stats #root .container .main .products .item {
+  position: relative;
+  display: flex;
+  background-color: rgb(28, 25, 25);
+  border-radius: 30px;
+  margin-bottom: 2%;
+  width: 121%;
+}
+#stats #root .container .main .products .item h1 {
+  margin-left: 3%;
+  color: white;
+  font-size: 25px;
+}
+#stats #root .container .main .products .item img {
+  width: 30%;
+  height: 300px;
+  border-radius: 30px;
+}
+#stats #root .container .main .products .item .wallpaper-list {
+  position: absolute;
+  top: 60%;
+  left: 22%;
+}
+#stats #root .container .main .products .item .wallpaper-list ul {
+  display: flex;
+}
+#stats #root .container .main .products .item .wallpaper-list ul li {
+  margin-left: 50%;
+  color: grey;
+  list-style: none;
+}
+#stats #root .container .main .products .item .wallpaper-list ul li b {
+  color: white;
+}
+
+.dis-none {
+  left: -400px !important;
+}
+
+.left {
+  left: 200px !important;
+}/*# sourceMappingURL=style.css.map */
